@@ -6,7 +6,19 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Skriv in fem heltal: ");
+            Console.WriteLine("Gissa ett hel tal mellan 1 till 9! ");
+            int Gissa = int.Parse(Console.ReadLine());
+            if (Gissa < 2)
+            {
+                Console.WriteLine("Du gissade för låg");
+            }
+            else if (Gissa > 2)
+                Console.WriteLine("Du gissade för hög");
+            else
+                Console.WriteLine("Grattis du gissade rätt");
+
+
+
         }
     }
 }
