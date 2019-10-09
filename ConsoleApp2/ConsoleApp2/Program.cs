@@ -6,17 +6,23 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gissa ett hel tal mellan 1 till 9! ");
-            int Gissa = int.Parse(Console.ReadLine());
-            if (Gissa < 2)
+            Console.WriteLine("Gissa ett hel tal mellan 1 till 101! ");
+            
+            Random random = new Random();
+            int randomZ = random.Next(1 , 101);
+            int Gissa;
+            do
             {
-                Console.WriteLine("Du gissade för låg");
-            }
-            else if (Gissa > 2)
-                Console.WriteLine("Du gissade för hög");
-            else
-                Console.WriteLine("Grattis du gissade rätt");
+                Gissa = int.Parse(Console.ReadLine());
+                if (Gissa < randomZ)
+                {
+                    Console.WriteLine("Du gissade för låg");
+                }
+                else if (Gissa > randomZ)
+                    Console.WriteLine("Du gissade för hög");
 
+            } while (Gissa != randomZ);
+                Console.WriteLine("Grattis du gissade rätt");
 
 
         }
