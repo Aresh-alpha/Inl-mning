@@ -24,6 +24,7 @@ namespace ConsoleApp2
                 else if (Gissa > randomZ)
                 {
                     Console.WriteLine("Du gissade för hög");
+                    
                 }
                 Console.WriteLine(Antalgissningar++);
 
@@ -31,6 +32,8 @@ namespace ConsoleApp2
             } while (Gissa != randomZ);
             Console.WriteLine("Grattis du gissade rätt");
             Console.WriteLine(Antalgissningar++);
+            Console.Write("Antal gissnigar! ");
+            
 
 
 
